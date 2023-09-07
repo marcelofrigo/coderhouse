@@ -1,8 +1,8 @@
-import express from 'express';
-import __dirname from './utils.js';
-import handlebars from 'express-handlebars';
-import viewRouter from './routes/views.router.js'
-import {Server} from 'socket.io';
+const express = require('express');
+const path = require('path'); // No necesitas asignar __dirname a un nuevo valor
+const handlebars = require('express-handlebars');
+const viewRouter = require('./routes/views.router.js'); // Asumiendo que este es un archivo CommonJS
+const { Server } = require('socket.io');
 
 const app = express();
 const httpServer = app.listen(8080, () => console.log("Escuchando en el puerto 8080"));
